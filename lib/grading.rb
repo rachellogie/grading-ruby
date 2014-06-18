@@ -18,4 +18,13 @@ class Grading
     end
     output
   end
+
+  def in_decline?
+    array_without_evens = diffs.reject { |movement| movement == :even}
+    if array_without_evens.length > 2
+      !array_without_evens[-3..-1].include? :up
+    else
+      false
+    end
+  end
 end
