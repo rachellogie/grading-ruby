@@ -1,6 +1,7 @@
 require_relative '../lib/grading'
+require 'json'
 
-describe Grading do
+describe 'Grading' do
   it "returns the diffs between the numbers" do
 
     input = [6,3,5,4,3,4,4,5]
